@@ -39,8 +39,9 @@
 </html>
 
 var apiResponse = {
-    "id": DOP,
-    "advice": "BE CAREFUL WITH THESE CURRENCIES.",
+    "Nama": "Imanuel"
+    "id": "DOP" 
+    "advice": "BE CAREFUL WITH DOP CURRENCIES.",
     "date": "2023-05-19"
   };
   
@@ -52,4 +53,35 @@ var apiResponse = {
   formresponse += '</form>';
   
   document.getElementById('formContainer').innerHTML = formresponse;
+
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="id">Name:</label>
+    <input type="text" id="Name" name="Nama Penulis"><br>
+
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id"><br>
+  
+    <label for="advice">Advice:</label>
+    <input type="text" id="advice" name="advice"><br>
+  
+    <label for="date">Date:</label>
+    <input type="text" id="date" name="ex:2019-05-28"><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+  <script>
+    function validateForm() {
+      var id = document.getElementById('id').value;
+      var advice = document.getElementById('advice').value;
+      var date = document.getElementById('date').value;
+  
+      if (id === '' || advice === '' || date === '') {
+        alert('All fields must be filled out');
+        return false;
+      }  
+        return true;
+    }
+  </script>
+  
  
